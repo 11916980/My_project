@@ -7,8 +7,8 @@
 - [Installation](#installation)
 - [Package Structure of Plotly](#package-structure-of-plotly)
 - [Simple plot](#simple-plot) 
-- [Creating Different Types of Charts related to data visualization :](#Creating.Different.Types.of.Charts.related.to.data.visualization)  
-     1 [Line Chart](#Line.Chart)  
+- [Creating Different Types of Charts related to data visualization :](#creating-different-types-of-charts-related-to-data-visualization)  
+     1 [Line Chart](#line-chart)  
      2 [Bar Chart](#Bar.Chart)  
      3 [Histograms](#Histograms)  
      4 [Scatter Plot and Bubble charts](#Scatter.Plot.and.Bubble.charts)  
@@ -71,3 +71,26 @@ Output:
 
 In the above example, the plotly.express module is imported which returns the Figure instance. We have created a simple line chart by passing the x, y coordinates of the points to be plotted.
 
+## _Creating Different Types of Charts related to data visualization_  
+With plotly we can create more than 40 charts and every plot can be created using the **plotly.express and plotly.graph_objects class**. Let’s see some commonly used charts with the help of Plotly.  
+
+### Line Chart
+[Line plot](https://www.geeksforgeeks.org/line-chart-using-plotly-in-python/) in Plotly is much accessible and illustrious annexation to plotly which manage a variety of types of data and assemble easy-to-style statistic. With **px.line** each data position is represented as a vertex  (which location is given by the x and y columns) of a polyline mark in 2D space.  
+Example:  
+```sh
+import plotly.express as px
+
+# using the iris dataset
+df = px.data.iris()
+
+# plotting the line chart
+fig = px.line(df, x="species", y="petal_width")
+
+# showing the plot
+fig.show()
+```  
+Output :
+![](line_chart.png)  
+Refer to the below articles to get detailed information about the line charts.
+- [plotly.express.line() function in Python](https://www.geeksforgeeks.org/plotly-express-line-function-in-python/)
+- [Line Chart using Plotly in Python](https://www.geeksforgeeks.org/line-chart-using-plotly-in-python/)
