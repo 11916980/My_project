@@ -9,10 +9,10 @@
 - [Simple plot](#simple-plot) 
 - [Creating Different Types of Charts related to data visualization :](#creating-different-types-of-charts-related-to-data-visualization)  
      1 [Line Chart](#line-chart)  
-     2 [Bar Chart](#Bar.Chart)  
-     3 [Histograms](#Histograms)  
-     4 [Scatter Plot and Bubble charts](#Scatter.Plot.and.Bubble.charts)  
-     5 [Pie Charts](#Pie.Charts)  
+     2 [Bar Chart](#bar-chart)  
+     3 [Histograms](#histograms)  
+     4 [Scatter Plot and Bubble charts](#scatter-plot-and-bubble-charts)  
+     5 [Pie Charts](#pie-charts)  
      6 [Box Plots](#Box.Plots)  
      7 [Violin plots](#Violin.plots)  
      8 [Gantt Charts](#Gantt.Charts)  
@@ -74,7 +74,7 @@ In the above example, the plotly.express module is imported which returns the Fi
 ## _Creating Different Types of Charts related to data visualization_  
 With plotly we can create more than 40 charts and every plot can be created using the **plotly.express and plotly.graph_objects class**. Let’s see some commonly used charts with the help of Plotly.  
 
-### Line Chart
+### _Line Chart_
 [Line plot](https://www.geeksforgeeks.org/line-chart-using-plotly-in-python/) in Plotly is much accessible and illustrious annexation to plotly which manage a variety of types of data and assemble easy-to-style statistic. With **px.line** each data position is represented as a vertex  (which location is given by the x and y columns) of a polyline mark in 2D space.  
 Example:  
 ```sh
@@ -94,3 +94,109 @@ Output :
 Refer to the below articles to get detailed information about the line charts.
 - [plotly.express.line() function in Python](https://www.geeksforgeeks.org/plotly-express-line-function-in-python/)
 - [Line Chart using Plotly in Python](https://www.geeksforgeeks.org/line-chart-using-plotly-in-python/)
+
+### _Bar Chart_  
+A [bar chart](https://www.geeksforgeeks.org/bar-chart-using-plotly-in-python/) is a pictorial representation of data that presents categorical data with rectangular bars with heights or lengths proportional to the values that they represent. In other words, it is the pictorial representation of dataset. These data sets contain the numerical values of variables that represent the length or height.  
+Example:  
+```sh
+import plotly.express as px
+
+# using the iris dataset
+df = px.data.iris()
+
+# plotting the bar chart
+fig = px.bar(df, x="sepal_width", y="sepal_length")
+
+# showing the plot
+fig.show()
+```  
+Output :  
+![](bar_chart.png)  
+Refer to the below articles to get detailed information about the bar chart.
+- [Bar chart using Plotly in Python](https://www.geeksforgeeks.org/bar-chart-using-plotly-in-python/)
+- [How to create Stacked bar chart in Python-Plotly?](https://www.geeksforgeeks.org/how-to-create-stacked-bar-chart-in-python-plotly/)
+- [How to group Bar Charts in Python-Plotly?](https://www.geeksforgeeks.org/how-to-group-bar-charts-in-python-plotly/)
+
+### _Histograms_  
+A [histogram](https://www.geeksforgeeks.org/histogram-using-plotly-in-python/) contains a rectangular area to display the statistical information which is proportional to the frequency of a variable and its width in successive numerical intervals. A graphical representation that manages a group of data points into different specified ranges. It has a special feature that shows no gaps between the bars and similar to a vertical bar graph.  
+Example: 
+```sh
+import plotly.express as px
+
+# using the iris dataset
+df = px.data.iris()
+
+# plotting the histogram
+fig = px.histogram(df, x="sepal_length", y="petal_width")
+
+# showing the plot
+fig.show()
+```  
+Output :  
+![](histogram.png)  
+Refer to the below articles to get detailed information about the histograms.
+
+- [Histogram using Plotly in Python](https://www.geeksforgeeks.org/histogram-using-plotly-in-python/)  
+- [Histograms in Plotly using graph_objects class](https://www.geeksforgeeks.org/histograms-in-plotly-using-graph_objects-class/)  
+- [How to create a Cumulative Histogram in Plotly?](https://www.geeksforgeeks.org/how-to-create-a-cumulative-histogram-in-plotly/)
+
+### _Scatter Plot and Bubble charts_  
+A [scatter plot](https://www.geeksforgeeks.org/scatter-plot-using-plotly-in-python/) is a set of dotted points to represent individual pieces of data in the horizontal and vertical axis. A graph in which the values of two variables are plotted along X-axis and Y-axis, the pattern of the resulting points reveals a correlation between them.  
+A [bubble plot](https://www.geeksforgeeks.org/bubble-chart-using-plotly-in-python/) is a scatter plot with bubbles (color-filled circles). Bubbles have various sizes dependent on another variable in the data. It can be created using the scatter() method of plotly.express.
+Example 1: Scatter Plot  
+```sh
+import plotly.express as px
+
+# using the iris dataset
+df = px.data.iris()
+
+# plotting the scatter chart
+fig = px.scatter(df, x="species", y="petal_width")
+
+# showing the plot
+fig.show()
+```  
+Output : 
+![](Scatter_Plot.png)
+Example 2: Bubble Plot  
+```sh
+import plotly.express as px
+
+# using the iris dataset
+df = px.data.iris()
+
+# plotting the bubble chart
+fig = px.scatter(df, x="species", y="petal_width",
+				size="petal_length", color="species")
+
+# showing the plot
+fig.show()
+```  
+Output :  
+![](Bubble%20Plot.png)  
+Refer to the below articles to get detailed information about the scatter plots and bubble plots.
+- [plotly.express.scatter() function in Python](https://www.geeksforgeeks.org/plotly-express-scatter-function-in-python/)
+- [Scatter plot in Plotly using graph_objects class](https://www.geeksforgeeks.org/scatter-plot-in-plotly-using-graph_objects-class/)
+- [Scatter plot using Plotly in Python](https://www.geeksforgeeks.org/scatter-plot-using-plotly-in-python/)
+- [Bubble chart using Plotly in Python](https://www.geeksforgeeks.org/bubble-chart-using-plotly-in-python/)  
+### _Pie Charts_
+A [pie chart](https://www.geeksforgeeks.org/pie-plot-using-plotly-in-python/) is a circular statistical graphic, which is divided into slices to illustrate numerical proportions. It depicts a special chart that uses “pie slices”, where each sector shows the relative sizes of data. A circular chart cuts in a form of radii into segments describing relative frequencies or magnitude also known as circle graph.  
+Example:  
+```sh
+import plotly.express as px
+
+# using the tips dataset
+df = px.data.tips()
+
+# plotting the pie chart
+fig = px.pie(df, values="total_bill", names="day")
+
+# showing the plot
+fig.show()
+```  
+Output :  
+![](pie_chart.png)  
+Refer to the below articles to get detailed information about the pie charts.
+- [Pie plot using Plotly in Python](https://www.geeksforgeeks.org/pie-plot-using-plotly-in-python/)
+
+
