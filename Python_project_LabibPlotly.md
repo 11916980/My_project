@@ -144,6 +144,7 @@ Refer to the below articles to get detailed information about the histograms.
 A [scatter plot](https://www.geeksforgeeks.org/scatter-plot-using-plotly-in-python/) is a set of dotted points to represent individual pieces of data in the horizontal and vertical axis. A graph in which the values of two variables are plotted along X-axis and Y-axis, the pattern of the resulting points reveals a correlation between them.  
 A [bubble plot](https://www.geeksforgeeks.org/bubble-chart-using-plotly-in-python/) is a scatter plot with bubbles (color-filled circles). Bubbles have various sizes dependent on another variable in the data. It can be created using the scatter() method of plotly.express.
 Example 1: Scatter Plot  
+
 ```sh
 import plotly.express as px
 
@@ -157,8 +158,10 @@ fig = px.scatter(df, x="species", y="petal_width")
 fig.show()
 ```  
 Output : 
-![](Scatter_Plot.png)
+![](Scatter_Plot.png)  
+
 Example 2: Bubble Plot  
+
 ```sh
 import plotly.express as px
 
@@ -173,15 +176,20 @@ fig = px.scatter(df, x="species", y="petal_width",
 fig.show()
 ```  
 Output :  
-![](Bubble%20Plot.png)  
+
+![](Bubble_Plot.png)  
+
 Refer to the below articles to get detailed information about the scatter plots and bubble plots.
 - [plotly.express.scatter() function in Python](https://www.geeksforgeeks.org/plotly-express-scatter-function-in-python/)
 - [Scatter plot in Plotly using graph_objects class](https://www.geeksforgeeks.org/scatter-plot-in-plotly-using-graph_objects-class/)
 - [Scatter plot using Plotly in Python](https://www.geeksforgeeks.org/scatter-plot-using-plotly-in-python/)
 - [Bubble chart using Plotly in Python](https://www.geeksforgeeks.org/bubble-chart-using-plotly-in-python/)  
-### _Pie Charts_
+
+### _Pie Charts_  
+
 A [pie chart](https://www.geeksforgeeks.org/pie-plot-using-plotly-in-python/) is a circular statistical graphic, which is divided into slices to illustrate numerical proportions. It depicts a special chart that uses “pie slices”, where each sector shows the relative sizes of data. A circular chart cuts in a form of radii into segments describing relative frequencies or magnitude also known as circle graph.  
 Example:  
+  
 ```sh
 import plotly.express as px
 
@@ -195,7 +203,9 @@ fig = px.pie(df, values="total_bill", names="day")
 fig.show()
 ```  
 Output :  
+
 ![](pie_chart.png)  
+
 Refer to the below articles to get detailed information about the pie charts.
 - [Pie plot using Plotly in Python](https://www.geeksforgeeks.org/pie-plot-using-plotly-in-python/)
 
