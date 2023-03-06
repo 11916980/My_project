@@ -13,19 +13,12 @@
      3 [Histograms](#histograms)  
      4 [Scatter Plot and Bubble charts](#scatter-plot-and-bubble-charts)  
      5 [Pie Charts](#pie-charts)  
-     6 [Box Plots](#Box.Plots)  
-     7 [Violin plots](#Violin.plots)  
-     8 [Gantt Charts](#Gantt.Charts)  
-     9 [Contour Plots](#Contour.Plots)  
-     10 [Heatmaps](#Heatmaps)  
-     11 [Error Bars](#Error.Bars)  
-     12 [3D Line Plots](#3D.Line.Plots)  
-     13 [3D Scatter Plot Plotly](#3D.Scatter.Plot.Plotly)  
-     14 [3D Surface Plots](#3D.Surface.Plots)  
-- [Interacting with the Plots:](#Interacting.with.the.Plots)  
-     1 [Creating Dropdown Menu in Plotly](#Creating.Dropdown.Menu.in.Plotly)  
-     2 [Adding Buttons to the Plot](#Adding.Buttons.to.the.Plot)  
-     3 [Creating Sliders and Selectors to the Plot](#CreatingSlidersandSelectorstothePlot)  
+     6 [Box Plots](#box-plots)    
+     7 [Gantt Charts](#gantt-charts)  
+     8 [Contour Plots](#contour-plots)  
+     9 [Heatmaps](#heatmaps)     
+     10 [3D Scatter Plot Plotly](#3D.Scatter.Plot.Plotly)  
+     11 [3D Surface Plots](#3D.Surface.Plots)       
 - [More Plots using Plotly](#More.Plots.using.Plotly)  
 - [Conclusion]
 
@@ -207,6 +200,114 @@ Output :
 ![](pie_chart.png)  
 
 Refer to the below articles to get detailed information about the pie charts.
-- [Pie plot using Plotly in Python](https://www.geeksforgeeks.org/pie-plot-using-plotly-in-python/)
+- [Pie plot using Plotly in Python](https://www.geeksforgeeks.org/pie-plot-using-plotly-in-python/)  
+
+### _Box Plots_  
+
+A [Box Plot](https://www.geeksforgeeks.org/understanding-different-box-plot-with-visualization/) is also known as Whisker plot is created to display the summary of the set of data values having properties like minimum, first quartile, median, third quartile and maximum. In the box plot, a box is created from the first quartile to the third quartile, a vertical line is also there which goes through the box at the median. Here x-axis denotes the data to be plotted while the y-axis shows the frequency distribution.  
+Example:  
+```sh
+import plotly.express as px
+
+# using the tips dataset
+df = px.data.tips()
+
+# plotting the box chart
+fig = px.box(df, x="day", y="total_bill")
+
+# showing the plot
+fig.show()
+```  
+Output :  
+![](box_plot.png)  
+
+Refer to the below articles to get detailed information about box plots.
+- [Box Plot using Plotly in Python](https://www.geeksforgeeks.org/box-plot-using-plotly-in-python/)
+- [Box plot in Plotly using graph_objects class](https://www.geeksforgeeks.org/box-plot-in-plotly-using-graph_objects-class/)
+- [How to create Grouped box plot in Plotly?](https://www.geeksforgeeks.org/how-to-create-grouped-box-plot-in-plotly/)  
+
+### _Gantt Charts_  
+
+[Generalized Activity Normalization Time Table (GANTT) chart](https://www.geeksforgeeks.org/short-note-on-gantt-chart/) is type of chart in which series of horizontal lines are present that show the amount of work done or production completed in given period of time in relation to amount planned for those projects. 
+Example:  
+```sh
+import plotly.figure_factory as ff
+
+# Data to be plotted
+df = [dict(Task="A", Start='2020-01-01', Finish='2009-02-02'),
+	dict(Task="Job B", Start='2020-03-01', Finish='2020-11-11'),
+	dict(Task="Job C", Start='2020-08-06', Finish='2020-09-21')]
+
+# Creating the plot
+fig = ff.create_gantt(df)
+fig.show()
+```  
+Output :  
+![](gantt_chart.png)  
+
+### Contour Plots  
+
+[Contour plots](https://www.geeksforgeeks.org/contour-plots/) also called level plots are a tool for doing multivariate analysis and visualizing 3-D plots in 2-D space. If we consider X and Y as our variables we want to plot then the response Z will be plotted as slices on the X-Y plane due to which contours are sometimes referred as Z-slices or iso-response.  
+A contour plots is used in the case where you want to see the changes in some value (Z) as a function with respect to the two values (X, Y). Consider the below example.  
+Example:  
+```sh
+import plotly.graph_objects as go
+
+
+# Creating the X, Y value that will
+# change the values of Z as a function
+feature_x = np.arange(0, 50, 2)
+feature_y = np.arange(0, 50, 3)
+
+# Creating 2-D grid of features
+[X, Y] = np.meshgrid(feature_x, feature_y)
+
+Z = np.cos(X / 2) + np.sin(Y / 4)  
+
+# plotting the figure
+fig = go.Figure(data =
+	go.Contour(x = feature_x, y = feature_y, z = Z))
+
+fig.show()
+```  
+Output :  
+
+![](contour_plot.png)  
+
+Refer to the below articles to get detailed information about contour plots.
+- [Contour Plots using Plotly in Python](https://www.geeksforgeeks.org/contour-plots-using-plotly-in-python/)  
+
+### _Heatmaps_  
+
+[Heatmap](https://www.geeksforgeeks.org/create-heatmaps-using-graph_objects-class-in-plotly/) is defined as a graphical representation of data using colors to visualize the value of the matrix. In this, to represent more common values or higher activities brighter colors basically reddish colors are used and to represent less common or activity values, darker colors are preferred. Heatmap is also defined by the name of the shading matrix.  
+Example:  
+```sh
+import plotly.graph_objects as go
+
+
+feature_x = np.arange(0, 50, 2)
+feature_y = np.arange(0, 50, 3)
+
+# Creating 2-D grid of features
+[X, Y] = np.meshgrid(feature_x, feature_y)
+
+Z = np.cos(X / 2) + np.sin(Y / 4)
+
+# plotting the figure  
+fig = go.Figure(data =
+	go.Heatmap(x = feature_x, y = feature_y, z = Z,))
+
+fig.show()
+```  
+Output :  
+
+![](Heatmap.png)  
+
+Refer to the below articles to get detailed information about the heatmaps.
+- [Create Heatmaps using graph_objects class in Plotly](https://www.geeksforgeeks.org/create-heatmaps-using-graph_objects-class-in-plotly/)
+- [Annotated Heatmaps using Plotly in Python](https://www.geeksforgeeks.org/annotated-heatmaps-using-plotly-in-python/)  
+
+
+
 
 
