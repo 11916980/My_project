@@ -17,8 +17,8 @@
      7 [Gantt Charts](#gantt-charts)  
      8 [Contour Plots](#contour-plots)  
      9 [Heatmaps](#heatmaps)     
-     10 [3D Scatter Plot Plotly](#3D.Scatter.Plot.Plotly)  
-     11 [3D Surface Plots](#3D.Surface.Plots)       
+     10 [3D Scatter Plot Plotly](#3d-scatter-plot-plotly)  
+     11 [3D Surface Plots](#3d-surface-plots)       
 - [More Plots using Plotly](#More.Plots.using.Plotly)  
 - [Conclusion]
 
@@ -306,6 +306,53 @@ Output :
 Refer to the below articles to get detailed information about the heatmaps.
 - [Create Heatmaps using graph_objects class in Plotly](https://www.geeksforgeeks.org/create-heatmaps-using-graph_objects-class-in-plotly/)
 - [Annotated Heatmaps using Plotly in Python](https://www.geeksforgeeks.org/annotated-heatmaps-using-plotly-in-python/)  
+
+### _3D Scatter Plot Plotly_  
+
+[3D Scatter Plot](https://www.geeksforgeeks.org/3d-surface-plots-using-plotly-in-python/) can plot two-dimensional graphics that can be enhanced by mapping up to three additional variables while using the semantics of hue, size, and style parameters. All the parameter control visual semantic which are used to identify the different subsets. Using redundant semantics can be helpful for making graphics more accessible. It can be created using the scatter_3d function of plotly.express class.  
+Example:  
+```sh
+import plotly.express as px
+
+# Data to be plotted
+df = px.data.iris()
+
+# Plotting the figure
+fig = px.scatter_3d(df, x = 'sepal_width',
+					y = 'sepal_length',
+					z = 'petal_width',
+					color = 'species')
+
+fig.show()
+```  
+Output :  
+![](3d_scatter_plot.png)  
+
+Refer to the below articles to get detailed information about the 3D scatter plot.
+- [3D scatter plot using Plotly in Python](https://www.geeksforgeeks.org/3d-surface-plots-using-plotly-in-python/)
+- [3D Scatter Plot using graph_objects Class in Plotly-Python](https://www.geeksforgeeks.org/3d-scatter-plot-using-graph_objects-class-in-plotly-python/)
+- [3D Bubble chart using Plotly in Python](https://www.geeksforgeeks.org/3d-bubble-chart-using-plotly-in-python/)  
+
+### _3D Surface Plots_
+
+[Surface plot](https://www.geeksforgeeks.org/3d-surface-plots-using-plotly-in-python/) is those plot which has three-dimensions data which is X, Y, and Z. Rather than showing individual data points, the surface plot has a functional relationship between dependent variable Y and have two independent variables X and Z. This plot is used to distinguish between dependent and independent variables.  
+Example:  
+```sh
+import plotly.graph_objects as go
+import numpy as np
+
+# Data to be plotted
+x = np.outer(np.linspace(-2, 2, 30), np.ones(30))
+y = x.copy().T
+z = np.cos(x ** 2 + y ** 2)
+
+# plotting the figure
+fig = go.Figure(data=[go.Surface(x=x, y=y, z=z)])
+
+fig.show()
+```  
+Output :  
+![](3d_surface_plot.png)  
 
 
 
