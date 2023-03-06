@@ -19,8 +19,8 @@
      9 [Heatmaps](#heatmaps)     
      10 [3D Scatter Plot Plotly](#3d-scatter-plot-plotly)  
      11 [3D Surface Plots](#3d-surface-plots)       
-- [More Plots using Plotly](#More.Plots.using.Plotly)  
-- [Conclusion]
+- [More Plots using Plotly](#more-plots-using-plotly)  
+- [Conclusion](#conclusion)
 
 ## _Introduction to plotly_
 
@@ -354,6 +354,85 @@ fig.show()
 Output :  
 ![](3d_surface_plot.png)  
 
+## _More Plots using Plotly_  
+
+- [plotly.express.scatter_geo() function in Python](https://www.geeksforgeeks.org/plotly-express-scatter_geo-function-in-python/)
+
+- [plotly.express.scatter_polar() function in Python](https://www.geeksforgeeks.org/plotly-express-scatter_polar-function-in-python/)  
+- [plotly.express.scatter_ternary() function in Python](https://www.geeksforgeeks.org/plotly-express-scatter_ternary-function-in-python/)  
+
+- [plotly.express.line_ternary() function in Python](https://www.geeksforgeeks.org/plotly-express-line_ternary-function-in-python/)  
+
+- [Filled area chart using plotly in Python](https://www.geeksforgeeks.org/filled-area-chart-using-plotly-in-python/)  
+
+- [How to Create Stacked area plot using Plotly in
+Python?](https://www.geeksforgeeks.org/how-to-create-stacked-area-plot-using-plotly-in-python/)  
+
+- [Sunburst Plot using Plotly in Python](https://www.geeksforgeeks.org/sunburst-plot-using-plotly-in-python/)  
+
+- [Sunburst Plot using graph_objects class in plotly](https://www.geeksforgeeks.org/sunburst-plot-using-graph_objects-class-in-plotly/)  
+
+- [plotly.figure_factory.create_annotated_heatmap() function in Python](https://www.geeksforgeeks.org/plotly-figure_factory-create_annotated_heatmap-function-in-python/)  
+
+- [plotly.figure_factory.create_2d_density() function in Python](https://www.geeksforgeeks.org/plotly-figure_factory-create_2d_density-function-in-python/)  
+
+- [Ternary contours Plot using Plotly in Python](https://www.geeksforgeeks.org/ternary-contours-plot-using-plotly-in-python/)  
+
+- [How to make Log Plots in Plotly – Python?](https://www.geeksforgeeks.org/how-to-make-log-plots-in-plotly-python/)  
+
+- [Polar Charts using Plotly in Python](https://www.geeksforgeeks.org/polar-charts-using-plotly-in-python/)  
+
+- [Carpet Contour Plot using Plotly in Python](https://www.geeksforgeeks.org/carpet-contour-plot-using-plotly-in-python/)  
+
+- [Ternary Plots in Plotly](https://www.geeksforgeeks.org/ternary-plots-in-plotly/)  
+
+- [How to create a Ternary Overlay using Plotly?](https://www.geeksforgeeks.org/how-to-create-a-ternary-overlay-using-plotly/)  
+
+- [Parallel Coordinates Plot using Plotly in Python](https://www.geeksforgeeks.org/parallel-coordinates-plot-using-plotly-in-python/)  
+- [Carpet Plots using Plotly in Python](https://www.geeksforgeeks.org/carpet-plots-using-plotly-in-python/)  
+
+- [3D Cone Plots using Plotly in Python](https://www.geeksforgeeks.org/3d-cone-plots-using-plotly-in-python/)  
+
+- [3D Volume Plots using Plotly in Python](https://www.geeksforgeeks.org/3d-volume-plots-using-plotly-in-python/)  
+
+- [3D Streamtube Plots using Plotly in Python](https://www.geeksforgeeks.org/3d-streamtube-plots-using-plotly-in-python/)  
+
+- [3D Mesh Plots using Plotly in Python](https://www.geeksforgeeks.org/3d-mesh-plots-using-plotly-in-python/)  
+
+- [How to create Tables using Plotly in Python?](https://www.geeksforgeeks.org/how-to-create-tables-using-plotly-in-python/)  
+
+- [plotly.figure_factory.create_dendrogram() function in Python](https://www.geeksforgeeks.org/plotly-figure_factory-create_dendrogram-function-in-python/)  
+
+- [Define Node position in Sankey Diagram in plotly](https://www.geeksforgeeks.org/define-node-position-in-sankey-diagram-in-plotly/)  
+- [Sankey Diagram using Plotly in Python](https://www.geeksforgeeks.org/sankey-diagram-using-plotly-in-python/)  
+
+- [Quiver Plots using Plotly in Python](https://www.geeksforgeeks.org/quiver-plots-using-plotly-in-python/)  
+
+- [Treemap using Plotly in Python](https://www.geeksforgeeks.org/treemap-using-plotly-in-python/)
+- [Treemap using graph_objects class in plotly](https://www.geeksforgeeks.org/treemap-using-graph_objects-class-in-plotly/)  
+
+- [plotly.figure_factory.create_candlestick() function in Python](https://www.geeksforgeeks.org/plotly-figure_factory-create_candlestick-function-in-python/)  
+
+- [plotly.figure_factory.create_choropleth() function in Python](https://www.geeksforgeeks.org/plotly-figure_factory-create_choropleth-function-in-python/)  
+
+- [plotly.figure_factory.create_bullet() in Python](https://www.geeksforgeeks.org/plotly-figure_factory-create_bullet-in-python/)
+- [Streamline Plots in Plotly using Python](https://www.geeksforgeeks.org/streamline-plots-in-plotly-using-python/)  
+
+- [How to make Wind Rose and Polar Bar Charts in Plotly – Python?](https://www.geeksforgeeks.org/how-to-make-wind-rose-and-polar-bar-charts-in-plotly-python/)  
+
+## _Conclusion_  
+
+Plotly is a **crucial tool in the field of** [data visualization](https://www.techtarget.com/searchbusinessanalytics/definition/data-visualization#:~:text=Data%20visualization%20is%20the%20practice,outliers%20in%20large%20data%20sets.). Rather easy to learn, it allows you to create complex and elaborate graphics with the aim of representing the data well and making it understandable.  
+
+## __some resources consulted__  
+
+- [Python Plotly](https://www.geeksforgeeks.org/python-plotly-tutorial/)  
+- [With Data Visualization, give meaning to your data](https://datascientest.com/avec-la-data-visualisation-donnez-du-sens-a-vos-donnees)  
+- [Getting Started with Plot.ly](https://towardsdatascience.com/getting-started-with-plot-ly-3c73706a837c#:~:text=We%20can%20access%20this%20API,online%20to%20store%20your%20plots.)  
+
+-----
+
+__Thank You For Your Kind Attention__
 
 
 
